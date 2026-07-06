@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Play — TRIAD</title>
+  <meta name="description" content="Learn the objective, rules, controls, and winning condition for TRIAD, the 3D strategy puzzle game.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <svg class="triad-mark" viewBox="0 0 20 20"><circle cx="10" cy="3" r="2.4"/><circle cx="3" cy="16" r="2.4"/><circle cx="17" cy="16" r="2.4"/><line x1="10" y1="3" x2="3" y2="16"/><line x1="10" y1="3" x2="17" y2="16"/><line x1="3" y1="16" x2="17" y2="16"/></svg>
+        TRIAD
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-to-play.html">How to Play</a></li>
+        <li><a href="play.html">Play Game</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="buy.html">Buy Game</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="buy.html" class="btn btn-ghost btn-sm">Buy Game</a>
+        <a href="play.html" class="btn btn-primary btn-sm">Play Now</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="eyebrow"><span class="pill">GUIDE</span></div>
+      <h1>How to play TRIAD</h1>
+      <p>Everything you need to go from first click to first win — objective, rules, controls, and what a winning board looks like.</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- OBJECTIVE -->
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag"><span class="pill">01 · OBJECTIVE</span></div>
+          <h2>Claim three tiles in a straight line.</h2>
+          <p>TRIAD is played on a 3×3 board rendered in full 3D. Two players alternate placing pieces — an X or an O — until one of them lines up three matching pieces in a row, column, or diagonal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RULES -->
+    <section style="padding-top:0;">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag"><span class="pill">02 · RULES</span></div>
+          <h2>The rules, in full.</h2>
+        </div>
+        <div class="htp-grid reveal">
+          <div class="rule-card glass-card">
+            <div class="rule-icon">✕</div>
+            <div><h4>X always moves first</h4><p>In vs-AI mode you play as X and always take the opening move. In 2-player mode, X and O alternate starting each new round.</p></div>
+          </div>
+          <div class="rule-card glass-card">
+            <div class="rule-icon">◯</div>
+            <div><h4>One piece per turn</h4><p>Click any open tile to place your piece. Occupied tiles can't be selected again for the rest of the round.</p></div>
+          </div>
+          <div class="rule-card glass-card">
+            <div class="rule-icon">⌗</div>
+            <div><h4>Eight possible winning lines</h4><p>Three rows, three columns, and two diagonals — any of them completed with matching pieces ends the game instantly.</p></div>
+          </div>
+          <div class="rule-card glass-card">
+            <div class="rule-icon">＝</div>
+            <div><h4>A full board with no line is a draw</h4><p>If all nine tiles fill up with no winning line, the round ends in a draw and adds to your draw count.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTROLS -->
+    <section style="padding-top:0;">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag"><span class="pill">03 · CONTROLS</span></div>
+          <h2>Move the camera like it's your own board.</h2>
+        </div>
+        <div class="glass-card reveal" style="padding:8px 24px;">
+          <table class="controls-table">
+            <thead><tr><th>Input</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td><span class="key-badge">Left click / tap</span></td><td>Place your piece on the highlighted tile</td></tr>
+              <tr><td><span class="key-badge">Click + drag</span></td><td>Orbit the camera around the board</td></tr>
+              <tr><td><span class="key-badge">Scroll / pinch</span></td><td>Zoom the camera in or out</td></tr>
+              <tr><td><span class="key-badge">Hover</span></td><td>Preview which tile you're about to select</td></tr>
+              <tr><td><span class="key-badge">Shuffle button</span></td><td>Randomize the starting player and reset the camera angle</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- WINNING CONDITION -->
+    <section style="padding-top:0;">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag"><span class="pill">04 · WINNING CONDITION</span></div>
+          <h2>Three in a row, any direction.</h2>
+          <p>The moment a line completes, the board freezes, the winning tiles glow amber, and a beam of light is drawn across them — like the example below.</p>
+        </div>
+        <div class="win-visual reveal">
+          <div class="cell win">X</div><div class="cell win">X</div><div class="cell win">X</div>
+          <div class="cell">O</div><div class="cell">O</div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP BY STEP -->
+    <section style="padding-top:0;">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag"><span class="pill">05 · STEP-BY-STEP</span></div>
+          <h2>Your first round, walked through.</h2>
+        </div>
+        <div class="steps reveal">
+          <div class="step-item">
+            <div class="step-num">01</div>
+            <div><h4>Choose a mode</h4><p>On the Play Game page, pick "vs AI" for a solo challenge or "2 Players" to share the board with a friend.</p></div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">02</div>
+            <div><h4>Get comfortable with the camera</h4><p>Drag to orbit and scroll to zoom until you can see the whole board clearly.</p></div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">03</div>
+            <div><h4>Place your first piece</h4><p>Hover over a tile to preview it, then click to lock in your move. The timer and move counter start immediately.</p></div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">04</div>
+            <div><h4>Watch the opponent respond</h4><p>Against the AI, a short "thinking" pause plays before its move appears. In 2-player mode, pass control to the next player.</p></div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">05</div>
+            <div><h4>Close out the win</h4><p>Complete a line to trigger the win animation and confetti, then check the Leaderboard page to see where your run ranks.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0; padding-bottom:120px; text-align:center;">
+      <div class="container reveal">
+        <a href="play.html" class="btn btn-primary">Start Playing</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <svg class="triad-mark" viewBox="0 0 20 20"><circle cx="10" cy="3" r="2.4"/><circle cx="3" cy="16" r="2.4"/><circle cx="17" cy="16" r="2.4"/><line x1="10" y1="3" x2="3" y2="16"/><line x1="10" y1="3" x2="17" y2="16"/><line x1="3" y1="16" x2="17" y2="16"/></svg>
+            TRIAD
+          </a>
+          <p>A three-dimensional strategy puzzle, built with Three.js and a lot of attention to the small details.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-to-play.html">How to Play</a></li>
+            <li><a href="play.html">Play Game</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Store</h4>
+          <ul>
+            <li><a href="buy.html">Editions & Pricing</a></li>
+            <li><a href="buy.html#faq">Store FAQ</a></li>
+            <li><a href="buy.html#contact">Contact Sales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 TRIAD Games. All rights reserved.</span>
+        <span>Built with Three.js &amp; Vanilla JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

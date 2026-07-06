@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRIAD — A 3D Strategy Puzzle Game</title>
+  <meta name="description" content="TRIAD is a modern 3D strategy puzzle game built with Three.js. Play in-browser, climb the leaderboard, and take the physical edition home.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <svg class="triad-mark" viewBox="0 0 20 20"><circle cx="10" cy="3" r="2.4"/><circle cx="3" cy="16" r="2.4"/><circle cx="17" cy="16" r="2.4"/><line x1="10" y1="3" x2="3" y2="16"/><line x1="10" y1="3" x2="17" y2="16"/><line x1="3" y1="16" x2="17" y2="16"/></svg>
+        TRIAD
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-to-play.html">How to Play</a></li>
+        <li><a href="play.html">Play Game</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="buy.html">Buy Game</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="buy.html" class="btn btn-ghost btn-sm">Buy Game</a>
+        <a href="play.html" class="btn btn-primary btn-sm">Play Now</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <svg class="triad-mark" viewBox="0 0 20 20"><circle cx="10" cy="3" r="2.4"/><circle cx="3" cy="16" r="2.4"/><circle cx="17" cy="16" r="2.4"/><line x1="10" y1="3" x2="3" y2="16"/><line x1="10" y1="3" x2="17" y2="16"/><line x1="3" y1="16" x2="17" y2="16"/></svg>
+          A Three.js Strategy Puzzle
+        </div>
+        <h1>Three moves ahead<br>wins the board.</h1>
+        <p class="hero-lede">
+          TRIAD reimagines the classic three-in-a-row duel as a fully three-dimensional
+          puzzle. Rotate the board, outthink an unbeatable AI, and carve your name
+          into the global leaderboard.
+        </p>
+        <div class="hero-actions">
+          <a href="play.html" class="btn btn-primary">Play in Browser</a>
+          <a href="how-to-play.html" class="btn btn-ghost">How to Play</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>12K+</strong><span>Puzzles solved</span></div>
+          <div><strong>4.9<span class="dim">/5</span></strong><span>Player rating</span></div>
+          <div><strong>60fps</strong><span>Smooth 3D render</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <canvas id="hero-canvas"></canvas>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="grid-2 about-grid">
+          <div class="reveal">
+            <div class="section-tag"><span class="pill">ABOUT THE GAME</span></div>
+            <h2>A familiar game, rebuilt in three dimensions.</h2>
+            <p>
+              TRIAD keeps the elegant logic of tic-tac-toe but gives it real depth —
+              literally. Every tile lives on a rendered 3D board you can orbit and
+              zoom, every move drops a glowing piece into place, and every win draws
+              a beam of light across the field you claimed.
+            </p>
+            <p>
+              Built entirely on Three.js with a hand-written camera rig and an
+              unbeatable minimax opponent, it's designed to feel like a premium
+              puzzle cabinet — not a browser demo.
+            </p>
+          </div>
+          <div class="about-panel glass-card reveal">
+            <div class="about-row"><span>Engine</span><strong>Three.js (WebGL)</strong></div>
+            <div class="about-row"><span>Opponent AI</span><strong>Minimax, unbeatable</strong></div>
+            <div class="about-row"><span>Modes</span><strong>vs AI · 2 Player</strong></div>
+            <div class="about-row"><span>Save data</span><strong>Local, private</strong></div>
+            <div class="about-row"><span>Platforms</span><strong>Desktop · Tablet · Mobile</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag"><span class="pill">FEATURES</span></div>
+          <h2>Everything a puzzle deserves.</h2>
+          <p>Every feature below ships in the playable build — not a mockup.</p>
+        </div>
+        <div class="grid-3">
+          <div class="feature-card glass-card reveal">
+            <div class="feature-icon">◆</div>
+            <h3>True 3D Board</h3>
+            <p>A real WebGL scene with lighting, materials, and a camera you control by dragging.</p>
+          </div>
+          <div class="feature-card glass-card reveal">
+            <div class="feature-icon">✦</div>
+            <h3>Unbeatable AI</h3>
+            <p>A minimax opponent that never misses a winning line — or an easier mode if you'd rather relax.</p>
+          </div>
+          <div class="feature-card glass-card reveal">
+            <div class="feature-icon">⏱</div>
+            <h3>Live Scoring</h3>
+            <p>Timer, move counter, and a running score that follows you across sessions.</p>
+          </div>
+          <div class="feature-card glass-card reveal">
+            <div class="feature-icon">🎉</div>
+            <h3>Win Celebrations</h3>
+            <p>A glowing win-line render and a confetti burst the moment you close out a match.</p>
+          </div>
+          <div class="feature-card glass-card reveal">
+            <div class="feature-icon">☰</div>
+            <h3>Global Leaderboard</h3>
+            <p>Searchable, sortable rankings by score, moves, and time — with your own runs saved automatically.</p>
+          </div>
+          <div class="feature-card glass-card reveal">
+            <div class="feature-icon">▢</div>
+            <h3>Two Player Mode</h3>
+            <p>Hand the mouse to a friend and play the board head-to-head, no AI required.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY CHOOSE US ===================== -->
+    <section class="why" id="why">
+      <div class="container">
+        <div class="grid-2">
+          <div class="reveal">
+            <div class="section-tag"><span class="pill">WHY TRIAD</span></div>
+            <h2>Made for people who take their puzzles seriously.</h2>
+            <ul class="why-list">
+              <li><strong>No downloads.</strong> The full 3D experience runs straight in your browser.</li>
+              <li><strong>No pay-to-win.</strong> Every player faces the same unbeatable logic.</li>
+              <li><strong>Built to last.</strong> A physical edition ships for collectors and game nights.</li>
+              <li><strong>Genuinely fast.</strong> Optimized rendering keeps it smooth even on modest laptops.</li>
+            </ul>
+            <a href="play.html" class="btn btn-primary">Try It Free</a>
+          </div>
+          <div class="why-visual reveal">
+            <div class="why-card glass-card">
+              <span class="pill">01</span>
+              <h4>Drag to orbit</h4>
+              <p>Rotate the board freely to line up your next move from any angle.</p>
+            </div>
+            <div class="why-card glass-card offset">
+              <span class="pill">02</span>
+              <h4>Click to place</h4>
+              <p>Hover highlights the open tile — click it to drop your piece with a satisfying animation.</p>
+            </div>
+            <div class="why-card glass-card">
+              <span class="pill">03</span>
+              <h4>Claim the line</h4>
+              <p>Three in a row lights up the board and locks in your leaderboard entry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag"><span class="pill">PLAYERS SAY</span></div>
+          <h2>Loved by casual players and puzzle veterans alike.</h2>
+        </div>
+        <div class="grid-3">
+          <div class="testimonial-card glass-card reveal">
+            <p>"I've played tic-tac-toe my whole life and this is the first version that actually surprised me. The 3D board changes how you read the whole game."</p>
+            <div class="testimonial-author"><span class="player-avatar-sm">NR</span><div><strong>Nadia R.</strong><span>Puzzle enthusiast</span></div></div>
+          </div>
+          <div class="testimonial-card glass-card reveal">
+            <p>"Beat the AI on hard exactly once after thirty tries. It genuinely does not make mistakes, which somehow makes winning even better."</p>
+            <div class="testimonial-author"><span class="player-avatar-sm">JT</span><div><strong>Jordan T.</strong><span>Game night host</span></div></div>
+          </div>
+          <div class="testimonial-card glass-card reveal">
+            <p>"The leaderboard kept my kids competing against each other for a whole weekend. Clean design, runs great on our old tablet too."</p>
+            <div class="testimonial-author"><span class="player-avatar-sm">MP</span><div><strong>Maria P.</strong><span>Parent</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-tag"><span class="pill">FAQ</span></div>
+          <h2>Questions, answered.</h2>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item open">
+            <div class="faq-question"><span>Do I need to install anything to play?</span><span class="plus">+</span></div>
+            <div class="faq-answer"><p>No. TRIAD runs entirely in your browser using WebGL through Three.js. Just open the Play Game page.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question"><span>Is my progress saved?</span><span class="plus">+</span></div>
+            <div class="faq-answer"><p>Yes — your score, move history, and leaderboard entries are saved locally in your browser using Local Storage.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question"><span>Can I play against a friend instead of the AI?</span><span class="plus">+</span></div>
+            <div class="faq-answer"><p>Yes. Switch to "2 Players" mode on the Play Game page to pass control back and forth on the same device.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question"><span>Is the AI actually unbeatable?</span><span class="plus">+</span></div>
+            <div class="faq-answer"><p>On Hard difficulty, yes — it uses a full minimax search, so the best outcome against it is a draw. Easy mode plays more casually.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question"><span>Is there a physical version of the game?</span><span class="plus">+</span></div>
+            <div class="faq-answer"><p>Yes, see the Buy Game page for the Standard and Collector's editions, including pricing and what's included.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <svg class="triad-mark" viewBox="0 0 20 20"><circle cx="10" cy="3" r="2.4"/><circle cx="3" cy="16" r="2.4"/><circle cx="17" cy="16" r="2.4"/><line x1="10" y1="3" x2="3" y2="16"/><line x1="10" y1="3" x2="17" y2="16"/><line x1="3" y1="16" x2="17" y2="16"/></svg>
+            TRIAD
+          </a>
+          <p>A three-dimensional strategy puzzle, built with Three.js and a lot of attention to the small details.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-to-play.html">How to Play</a></li>
+            <li><a href="play.html">Play Game</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Store</h4>
+          <ul>
+            <li><a href="buy.html">Editions & Pricing</a></li>
+            <li><a href="buy.html#faq">Store FAQ</a></li>
+            <li><a href="buy.html#contact">Contact Sales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 TRIAD Games. All rights reserved.</span>
+        <span>Built with Three.js &amp; Vanilla JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/hero-bg.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

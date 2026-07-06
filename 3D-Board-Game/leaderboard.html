@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard — TRIAD</title>
+  <meta name="description" content="See how your TRIAD runs stack up. Search, sort, and filter the global leaderboard by score, moves, and time.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/leaderboard.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <svg class="triad-mark" viewBox="0 0 20 20"><circle cx="10" cy="3" r="2.4"/><circle cx="3" cy="16" r="2.4"/><circle cx="17" cy="16" r="2.4"/><line x1="10" y1="3" x2="3" y2="16"/><line x1="10" y1="3" x2="17" y2="16"/><line x1="3" y1="16" x2="17" y2="16"/></svg>
+        TRIAD
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-to-play.html">How to Play</a></li>
+        <li><a href="play.html">Play Game</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="buy.html">Buy Game</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="buy.html" class="btn btn-ghost btn-sm">Buy Game</a>
+        <a href="play.html" class="btn btn-primary btn-sm">Play Now</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="board-wrap">
+    <div class="container">
+      <div class="page-header" style="padding-top:0; padding-bottom:32px;">
+        <div class="eyebrow"><span class="pill">RANKINGS</span></div>
+        <h1>Leaderboard</h1>
+        <p>Sample rankings shown alongside any runs you've saved on this device. Click a column to sort.</p>
+      </div>
+
+      <div class="board-toolbar">
+        <div class="search-box">
+          <input type="text" id="board-search" placeholder="Search players…">
+        </div>
+        <div class="rank-filter">
+          <button class="active" data-filter="all">All Players</button>
+          <button data-filter="top3">Top 3</button>
+        </div>
+      </div>
+
+      <div class="board-table-wrap">
+        <table class="board-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th data-key="name">Player <span class="arrow"></span></th>
+              <th data-key="score">Score <span class="arrow"></span></th>
+              <th data-key="moves">Moves <span class="arrow"></span></th>
+              <th data-key="time">Time <span class="arrow"></span></th>
+              <th data-key="date">Date <span class="arrow"></span></th>
+            </tr>
+          </thead>
+          <tbody id="board-body">
+            <!-- Rendered by js/leaderboard.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <svg class="triad-mark" viewBox="0 0 20 20"><circle cx="10" cy="3" r="2.4"/><circle cx="3" cy="16" r="2.4"/><circle cx="17" cy="16" r="2.4"/><line x1="10" y1="3" x2="3" y2="16"/><line x1="10" y1="3" x2="17" y2="16"/><line x1="3" y1="16" x2="17" y2="16"/></svg>
+            TRIAD
+          </a>
+          <p>A three-dimensional strategy puzzle, built with Three.js and a lot of attention to the small details.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-to-play.html">How to Play</a></li>
+            <li><a href="play.html">Play Game</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Store</h4>
+          <ul>
+            <li><a href="buy.html">Editions & Pricing</a></li>
+            <li><a href="buy.html#faq">Store FAQ</a></li>
+            <li><a href="buy.html#contact">Contact Sales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 TRIAD Games. All rights reserved.</span>
+        <span>Built with Three.js &amp; Vanilla JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/leaderboard.js"></script>
+</body>
+</html>
